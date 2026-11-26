@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>김민준 ♥ 이서연 결혼합니다</title>
+  <meta name="description" content="2027년 8월 8일 일요일 오후 1시, 인터불고 엑스코 호텔 컨벤션웨딩홀에서 저희 두 사람이 결혼합니다.">
+  <meta name="theme-color" content="#FAF6EE">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="김민준 ♥ 이서연 결혼합니다">
+  <meta property="og:description" content="2027년 8월 8일 일요일 오후 1시 · 인터불고 엑스코 호텔 컨벤션웨딩홀">
+  <meta property="og:image" content="image/05.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <button class="music-btn" id="musicBtn" type="button" aria-label="배경음악 켜기" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9 18V6l10-2v12"/>
+      <circle cx="6.5" cy="18" r="2.5"/>
+      <circle cx="16.5" cy="16" r="2.5"/>
+    </svg>
+  </button>
+  <audio id="bgm" src="audio/bgm.mp3" loop preload="none"></audio>
+
+  <main class="page">
+
+    <!-- 1. 인트로 -->
+    <section class="intro" id="intro">
+      <img class="intro__img" src="image/05.png" alt="신랑 김민준과 신부 이서연">
+      <div class="intro__veil" aria-hidden="true"></div>
+      <div class="intro__text">
+        <p class="en">We are getting married</p>
+        <h1 class="intro__names">김민준<span class="amp">&amp;</span>이서연</h1>
+        <p class="intro__date">2027. 08. 08 SUN</p>
+        <p class="intro__place">인터불고 엑스코 호텔 컨벤션웨딩홀</p>
+      </div>
+    </section>
+
+    <!-- 2. 인사말 -->
+    <section class="section greeting">
+      <p class="en reveal">Invitation</p>
+      <h2 class="reveal">초대합니다</h2>
+      <span class="ornament reveal" aria-hidden="true"></span>
+      <p class="greeting__text reveal">
+        같은 노래에 같이 웃던 날들이 쌓여,<br>
+        이제 한 집의 같은 문패를 달기로 했습니다.<br>
+        여름이 가장 환한 날,<br>
+        저희의 시작에 함께해 주세요.
+      </p>
+      <p class="greeting__names reveal">김민준 <span class="gold">&amp;</span> 이서연</p>
+      <figure class="photo reveal">
+        <img src="image/04.png" alt="서로 기대어 웃는 두 사람" loading="lazy">
+      </figure>
+    </section>
+
+    <!-- 3. 일시·장소 -->
+    <section class="section when">
+      <p class="en reveal">Wedding Day</p>
+      <h2 class="reveal">예식 안내</h2>
+      <span class="ornament reveal" aria-hidden="true"></span>
+      <p class="when__date reveal">2027년 8월 8일 일요일 오후 1시</p>
+      <p class="when__place reveal">인터불고 엑스코 호텔 컨벤션웨딩홀</p>
+      <p class="when__addr reveal">대구 북구 유통단로 80</p>
+
+      <div class="dday reveal" aria-live="polite">
+        <p class="dday__label en">D-Day</p>
+        <p class="dday__num" id="ddayNum">D-<span id="ddayDays">000</span></p>
+        <p class="dday__sub">결혼식까지 남은 시간</p>
+        <div class="dday__units">
+          <div class="unit"><b id="ddayH">00</b><em>HOURS</em><span>시간</span></div>
+          <i class="unit__dot" aria-hidden="true"></i>
+          <div class="unit"><b id="ddayM">00</b><em>MINUTES</em><span>분</span></div>
+          <i class="unit__dot" aria-hidden="true"></i>
+          <div class="unit"><b id="ddayS">00</b><em>SECONDS</em><span>초</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 갤러리 -->
+    <section class="section gallery">
+      <p class="en reveal">Gallery</p>
+      <h2 class="reveal">갤러리</h2>
+      <span class="ornament reveal" aria-hidden="true"></span>
+
+      <div class="slider reveal" id="slider">
+        <div class="slider__viewport">
+          <div class="slider__track" id="sliderTrack">
+            <div class="slide"><img src="image/01.png" alt="신랑 김민준" loading="lazy" draggable="false"></div>
+            <div class="slide"><img src="image/02.png" alt="신부 이서연" loading="lazy" draggable="false"></div>
+            <div class="slide"><img src="image/03.png" alt="손을 잡고 선 두 사람" loading="lazy" draggable="false"></div>
+            <div class="slide"><img src="image/06.png" alt="서로를 바라보며 걷는 두 사람" loading="lazy" draggable="false"></div>
+          </div>
+        </div>
+        <button class="slider__arrow slider__arrow--prev" id="prevBtn" type="button" aria-label="이전 사진">&#8249;</button>
+        <button class="slider__arrow slider__arrow--next" id="nextBtn" type="button" aria-label="다음 사진">&#8250;</button>
+        <div class="slider__dots" id="sliderDots" role="tablist" aria-label="사진 선택"></div>
+      </div>
+      <p class="hint reveal">사진을 누르면 크게 볼 수 있어요</p>
+    </section>
+
+    <!-- 5. 오시는 길 -->
+    <section class="section way">
+      <p class="en reveal">Location</p>
+      <h2 class="reveal">오시는 길</h2>
+      <span class="ornament reveal" aria-hidden="true"></span>
+
+      <div class="mapcard reveal">
+        <div class="map" id="map">
+          <button class="map__fallback" id="mapBtn" type="button" data-naver-open aria-label="네이버 지도 앱에서 열기">
+            <img class="map__img" id="mapImg" src="image/map.png" alt="예식장 위치 지도">
+            <span class="map__fb">
+              <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/>
+                <circle cx="12" cy="10" r="2.6"/>
+              </svg>
+              <span class="map__fb-title">네이버 지도에서 보기</span>
+              <span class="map__fb-sub">누르면 네이버 지도 앱이 열립니다</span>
+            </span>
+            <span class="map__badge">눌러서 네이버 지도 열기</span>
+          </button>
+        </div>
+        <p class="map__credit">지도 출처 NAVER 지도</p>
+        <p class="mapcard__name">인터불고 엑스코 호텔 컨벤션웨딩홀</p>
+        <p class="mapcard__addr">대구 북구 유통단로 80</p>
+        <div class="btn-row">
+          <button class="btn btn--fill" type="button" data-naver-open>네이버 지도 앱으로 열기</button>
+          <button class="btn btn--ghost" type="button" data-copy="대구 북구 유통단로 80" data-toast="주소가 복사되었습니다">주소 복사</button>
+        </div>
+      </div>
+
+      <div class="contact reveal">
+        <p class="contact__title">연락하기</p>
+        <div class="contact__row">
+          <div class="contact__who">
+            <span class="contact__role">신랑</span>
+            <span class="contact__name">김민준</span>
+            <a class="contact__num" href="tel:01012345678">010-1234-5678</a>
+          </div>
+          <span class="contact__btns">
+            <a class="btn btn--sm" href="tel:01012345678">전화</a>
+            <a class="btn btn--sm" href="sms:01012345678">문자</a>
+          </span>
+        </div>
+        <div class="contact__row">
+          <div class="contact__who">
+            <span class="contact__role">신부</span>
+            <span class="contact__name">이서연</span>
+            <a class="contact__num" href="tel:01087654321">010-8765-4321</a>
+          </div>
+          <span class="contact__btns">
+            <a class="btn btn--sm" href="tel:01087654321">전화</a>
+            <a class="btn btn--sm" href="sms:01087654321">문자</a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 마음 전하실 곳 -->
+    <section class="section gift">
+      <p class="en reveal">With Love</p>
+      <h2 class="reveal">마음 전하실 곳</h2>
+      <span class="ornament reveal" aria-hidden="true"></span>
+      <p class="gift__desc reveal">
+        참석이 어려우신 분들을 위해<br>
+        계좌번호를 안내드립니다.<br>
+        보내주시는 마음 감사히 간직하겠습니다.
+      </p>
+
+      <div class="account reveal">
+        <p class="account__en">Groom</p>
+        <p class="account__side">신랑측 계좌</p>
+        <span class="account__line" aria-hidden="true"></span>
+        <p class="account__bank">OO은행</p>
+        <p class="account__num">000-0000-000000</p>
+        <p class="account__holder">예금주 <b>김민준</b></p>
+        <button class="btn btn--copy" type="button" data-copy="OO은행 000-0000-000000" data-toast="신랑측 계좌번호가 복사되었습니다">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+          계좌번호 복사
+        </button>
+      </div>
+      <div class="account reveal">
+        <p class="account__en">Bride</p>
+        <p class="account__side">신부측 계좌</p>
+        <span class="account__line" aria-hidden="true"></span>
+        <p class="account__bank">OO은행</p>
+        <p class="account__num">000-0000-000000</p>
+        <p class="account__holder">예금주 <b>이서연</b></p>
+        <button class="btn btn--copy" type="button" data-copy="OO은행 000-0000-000000" data-toast="신부측 계좌번호가 복사되었습니다">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+          계좌번호 복사
+        </button>
+      </div>
+    </section>
+
+    <!-- 7. 마무리 -->
+    <section class="section closing">
+      <figure class="photo photo--wide reveal">
+        <img src="image/07.png" alt="반지를 낀 두 사람의 손" loading="lazy">
+      </figure>
+      <p class="closing__text reveal">
+        바쁘신 중에도 귀한 걸음 해주셔서<br>
+        진심으로 감사드립니다.
+      </p>
+      <p class="closing__names reveal">김민준 <span class="gold">&amp;</span> 이서연</p>
+      <div class="btn-row btn-row--center reveal">
+        <button class="btn btn--fill" id="shareBtn" type="button">카카오톡으로 공유하기</button>
+        <button class="btn btn--ghost" type="button" id="linkCopyBtn">링크 복사</button>
+      </div>
+      <p class="footer en">Min-jun &amp; Seo-yeon · 2027. 08. 08</p>
+    </section>
+
+  </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="닫기">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
